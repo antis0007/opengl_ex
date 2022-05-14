@@ -216,6 +216,195 @@ gl.c.s:
 	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/gl.c.s
 .PHONY : gl.c.s
 
+imgui/imgui.obj: imgui/imgui.cpp.obj
+
+.PHONY : imgui/imgui.obj
+
+# target to build an object file
+imgui/imgui.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj
+.PHONY : imgui/imgui.cpp.obj
+
+imgui/imgui.i: imgui/imgui.cpp.i
+
+.PHONY : imgui/imgui.i
+
+# target to preprocess a source file
+imgui/imgui.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.i
+.PHONY : imgui/imgui.cpp.i
+
+imgui/imgui.s: imgui/imgui.cpp.s
+
+.PHONY : imgui/imgui.s
+
+# target to generate assembly for a file
+imgui/imgui.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.s
+.PHONY : imgui/imgui.cpp.s
+
+imgui/imgui_demo.obj: imgui/imgui_demo.cpp.obj
+
+.PHONY : imgui/imgui_demo.obj
+
+# target to build an object file
+imgui/imgui_demo.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj
+.PHONY : imgui/imgui_demo.cpp.obj
+
+imgui/imgui_demo.i: imgui/imgui_demo.cpp.i
+
+.PHONY : imgui/imgui_demo.i
+
+# target to preprocess a source file
+imgui/imgui_demo.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.i
+.PHONY : imgui/imgui_demo.cpp.i
+
+imgui/imgui_demo.s: imgui/imgui_demo.cpp.s
+
+.PHONY : imgui/imgui_demo.s
+
+# target to generate assembly for a file
+imgui/imgui_demo.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.s
+.PHONY : imgui/imgui_demo.cpp.s
+
+imgui/imgui_draw.obj: imgui/imgui_draw.cpp.obj
+
+.PHONY : imgui/imgui_draw.obj
+
+# target to build an object file
+imgui/imgui_draw.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj
+.PHONY : imgui/imgui_draw.cpp.obj
+
+imgui/imgui_draw.i: imgui/imgui_draw.cpp.i
+
+.PHONY : imgui/imgui_draw.i
+
+# target to preprocess a source file
+imgui/imgui_draw.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.i
+.PHONY : imgui/imgui_draw.cpp.i
+
+imgui/imgui_draw.s: imgui/imgui_draw.cpp.s
+
+.PHONY : imgui/imgui_draw.s
+
+# target to generate assembly for a file
+imgui/imgui_draw.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.s
+.PHONY : imgui/imgui_draw.cpp.s
+
+imgui/imgui_impl_glfw.obj: imgui/imgui_impl_glfw.cpp.obj
+
+.PHONY : imgui/imgui_impl_glfw.obj
+
+# target to build an object file
+imgui/imgui_impl_glfw.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj
+.PHONY : imgui/imgui_impl_glfw.cpp.obj
+
+imgui/imgui_impl_glfw.i: imgui/imgui_impl_glfw.cpp.i
+
+.PHONY : imgui/imgui_impl_glfw.i
+
+# target to preprocess a source file
+imgui/imgui_impl_glfw.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.i
+.PHONY : imgui/imgui_impl_glfw.cpp.i
+
+imgui/imgui_impl_glfw.s: imgui/imgui_impl_glfw.cpp.s
+
+.PHONY : imgui/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+imgui/imgui_impl_glfw.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.s
+.PHONY : imgui/imgui_impl_glfw.cpp.s
+
+imgui/imgui_impl_opengl3.obj: imgui/imgui_impl_opengl3.cpp.obj
+
+.PHONY : imgui/imgui_impl_opengl3.obj
+
+# target to build an object file
+imgui/imgui_impl_opengl3.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj
+.PHONY : imgui/imgui_impl_opengl3.cpp.obj
+
+imgui/imgui_impl_opengl3.i: imgui/imgui_impl_opengl3.cpp.i
+
+.PHONY : imgui/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+imgui/imgui_impl_opengl3.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.i
+.PHONY : imgui/imgui_impl_opengl3.cpp.i
+
+imgui/imgui_impl_opengl3.s: imgui/imgui_impl_opengl3.cpp.s
+
+.PHONY : imgui/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+imgui/imgui_impl_opengl3.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.s
+.PHONY : imgui/imgui_impl_opengl3.cpp.s
+
+imgui/imgui_tables.obj: imgui/imgui_tables.cpp.obj
+
+.PHONY : imgui/imgui_tables.obj
+
+# target to build an object file
+imgui/imgui_tables.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj
+.PHONY : imgui/imgui_tables.cpp.obj
+
+imgui/imgui_tables.i: imgui/imgui_tables.cpp.i
+
+.PHONY : imgui/imgui_tables.i
+
+# target to preprocess a source file
+imgui/imgui_tables.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.i
+.PHONY : imgui/imgui_tables.cpp.i
+
+imgui/imgui_tables.s: imgui/imgui_tables.cpp.s
+
+.PHONY : imgui/imgui_tables.s
+
+# target to generate assembly for a file
+imgui/imgui_tables.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.s
+.PHONY : imgui/imgui_tables.cpp.s
+
+imgui/imgui_widgets.obj: imgui/imgui_widgets.cpp.obj
+
+.PHONY : imgui/imgui_widgets.obj
+
+# target to build an object file
+imgui/imgui_widgets.cpp.obj:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj
+.PHONY : imgui/imgui_widgets.cpp.obj
+
+imgui/imgui_widgets.i: imgui/imgui_widgets.cpp.i
+
+.PHONY : imgui/imgui_widgets.i
+
+# target to preprocess a source file
+imgui/imgui_widgets.cpp.i:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.i
+.PHONY : imgui/imgui_widgets.cpp.i
+
+imgui/imgui_widgets.s: imgui/imgui_widgets.cpp.s
+
+.PHONY : imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+imgui/imgui_widgets.cpp.s:
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\opengl_ex.dir\build.make src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.s
+.PHONY : imgui/imgui_widgets.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -259,6 +448,27 @@ help:
 	@echo ... gl.obj
 	@echo ... gl.i
 	@echo ... gl.s
+	@echo ... imgui/imgui.obj
+	@echo ... imgui/imgui.i
+	@echo ... imgui/imgui.s
+	@echo ... imgui/imgui_demo.obj
+	@echo ... imgui/imgui_demo.i
+	@echo ... imgui/imgui_demo.s
+	@echo ... imgui/imgui_draw.obj
+	@echo ... imgui/imgui_draw.i
+	@echo ... imgui/imgui_draw.s
+	@echo ... imgui/imgui_impl_glfw.obj
+	@echo ... imgui/imgui_impl_glfw.i
+	@echo ... imgui/imgui_impl_glfw.s
+	@echo ... imgui/imgui_impl_opengl3.obj
+	@echo ... imgui/imgui_impl_opengl3.i
+	@echo ... imgui/imgui_impl_opengl3.s
+	@echo ... imgui/imgui_tables.obj
+	@echo ... imgui/imgui_tables.i
+	@echo ... imgui/imgui_tables.s
+	@echo ... imgui/imgui_widgets.obj
+	@echo ... imgui/imgui_widgets.i
+	@echo ... imgui/imgui_widgets.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

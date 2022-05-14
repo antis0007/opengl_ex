@@ -5,8 +5,55 @@ src/CMakeFiles/opengl_ex.dir/gl.c.obj: ../../include/KHR/khrplatform.h
 src/CMakeFiles/opengl_ex.dir/gl.c.obj: ../../include/glad/gl.h
 src/CMakeFiles/opengl_ex.dir/gl.c.obj: ../../src/gl.c
 
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: ../../src/imgui/imgui.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: ../../src/imgui/imgui_internal.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: ../../src/imgui/imstb_textedit.h
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj: ../../src/imgui/imgui_demo.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imgui_draw.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imgui_internal.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imstb_rectpack.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imstb_textedit.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imstb_truetype.h
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../external/glfw/include/GLFW/glfw3.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../external/glfw/include/GLFW/glfw3native.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../src/imgui/imgui_impl_glfw.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../src/imgui/imgui_impl_glfw.h
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: ../../src/imgui/imgui_impl_opengl3.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: ../../src/imgui/imgui_impl_opengl3.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: ../../src/imgui/imgui_impl_opengl3_loader.h
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: ../../src/imgui/imgui_internal.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: ../../src/imgui/imgui_tables.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: ../../src/imgui/imstb_textedit.h
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: ../../src/imgui/imgui_internal.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: ../../src/imgui/imgui_widgets.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: ../../src/imgui/imstb_textedit.h
+
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../external/glfw/include/GLFW/glfw3.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../include/KHR/khrplatform.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../include/glad/gl.h
+src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imconfig.h
+src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui.h
+src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui_impl_glfw.h
+src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui_impl_opengl3.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/main.cpp
 

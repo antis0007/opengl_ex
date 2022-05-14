@@ -1,3 +1,8 @@
+//Relative path includes:
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_glfw.h"
+#include "imgui/imgui_impl_opengl3.h"
+
 #include <iostream>
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
@@ -8,6 +13,16 @@ void processInput(GLFWwindow *window);
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
+void setImGuiStyle(float highDPIscaleFactor)
+{
+    ImGuiStyle &style = ImGui::GetStyle();
+    ImGuiIO& io = ImGui::GetIO();
+    style.ScaleAllSizes(highDPIscaleFactor);
+    //io.Fonts->AddFontFromFileTTF("verdana.ttf", 18.0f * highDPIscaleFactor, NULL, NULL);
+    //io.Fonts->AddFontDefault();
+    io.Fonts->AddFontFromFileTTF("../../../src/imgui/misc/fonts/ProggyClean.ttf", 13*highDPIscaleFactor);
+    //ImGui::SetWindowFontScale(highDPIscaleFactor);
+}
 
 int main()
 {
@@ -161,6 +176,24 @@ int main()
     //glBindVertexArray(VAO);
     //someOpenGLFunctionThatDrawsOurTriangle();
 
+    //imgui
+    const char* glsl_version = "#version 330 core";
+    // Setup Dear ImGui context
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+
+    // Setup Dear ImGui style
+    ImGui::StyleColorsDark();
+    //ImGui::StyleColorsClassic();
+
+    // Setup Platform/Renderer backends
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init(glsl_version);
+    setImGuiStyle(2);
+    bool show_demo_window = true;
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -168,7 +201,29 @@ int main()
         // input
         // -----
         processInput(window);
+        // Start the Dear ImGui frame
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+        //ImGui::ShowDemoWindow(&show_demo_window);
+        if (ImGui::BeginMainMenuBar())
+        {
+	        if (ImGui::BeginMenu("File"))
+	        {
+		        if (ImGui::MenuItem("Exit")) // It would be nice if this was a "X" like in the windows title bar set off to the far right
+		        {
+			        glfwSetWindowShouldClose(window, GLFW_TRUE);
+		        }
 
+                        // It would also be nice if there could be a button for minimizing the window and a button for maximizing the window
+
+		        ImGui::EndMenu();
+	        }
+
+	        ImGui::EndMainMenuBar();
+        }
+
+        ImGui::Render();
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -178,6 +233,7 @@ int main()
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);

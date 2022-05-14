@@ -103,22 +103,134 @@ src/CMakeFiles/opengl_ex.dir/gl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/opengl_ex.dir/gl.c.s"
 	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\gl.c -o CMakeFiles\opengl_ex.dir\gl.c.s
 
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj: ../../src/imgui/imgui_impl_opengl3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui_impl_opengl3.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_impl_opengl3.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_impl_opengl3.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui_impl_opengl3.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_impl_opengl3.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui_impl_opengl3.cpp.s
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj: ../../src/imgui/imgui_impl_glfw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui_impl_glfw.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_impl_glfw.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_impl_glfw.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui_impl_glfw.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_impl_glfw.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui_impl_glfw.cpp.s
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj: ../../src/imgui/imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui.cpp.s
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj: ../../src/imgui/imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui_draw.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_draw.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_draw.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui_draw.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_draw.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui_draw.cpp.s
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj: ../../src/imgui/imgui_tables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui_tables.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_tables.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_tables.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui_tables.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_tables.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui_tables.cpp.s
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj: ../../src/imgui/imgui_widgets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui_widgets.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_widgets.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_widgets.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui_widgets.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_widgets.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui_widgets.cpp.s
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj: src/CMakeFiles/opengl_ex.dir/flags.make
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj: src/CMakeFiles/opengl_ex.dir/includes_CXX.rsp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj: ../../src/imgui/imgui_demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opengl_ex.dir\imgui\imgui_demo.cpp.obj -c C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_demo.cpp
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.i"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_demo.cpp > CMakeFiles\opengl_ex.dir\imgui\imgui_demo.cpp.i
+
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.s"
+	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\antis\Desktop\opengl_ex\src\imgui\imgui_demo.cpp -o CMakeFiles\opengl_ex.dir\imgui\imgui_demo.cpp.s
+
 # Object files for target opengl_ex
 opengl_ex_OBJECTS = \
 "CMakeFiles/opengl_ex.dir/main.cpp.obj" \
-"CMakeFiles/opengl_ex.dir/gl.c.obj"
+"CMakeFiles/opengl_ex.dir/gl.c.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj" \
+"CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj"
 
 # External object files for target opengl_ex
 opengl_ex_EXTERNAL_OBJECTS =
 
 src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/main.cpp.obj
 src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/gl.c.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj
+src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj
 src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/build.make
 src/opengl_ex.exe: external/glfw/src/libglfw3.a
 src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/linklibs.rsp
 src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/objects1.rsp
 src/opengl_ex.exe: src/CMakeFiles/opengl_ex.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable opengl_ex.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\antis\Desktop\opengl_ex\build\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable opengl_ex.exe"
 	cd /d C:\Users\antis\Desktop\opengl_ex\build\Debug\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opengl_ex.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

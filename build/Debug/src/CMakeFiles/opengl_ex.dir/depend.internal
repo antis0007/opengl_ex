@@ -5,8 +5,55 @@ src/CMakeFiles/opengl_ex.dir/gl.c.obj
  ../../include/KHR/khrplatform.h
  ../../include/glad/gl.h
  C:/Users/antis/Desktop/opengl_ex/src/gl.c
+src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.cpp
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_internal.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imstb_textedit.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_demo.cpp
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_draw.cpp
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_internal.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imstb_rectpack.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imstb_textedit.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imstb_truetype.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj
+ ../../external/glfw/include/GLFW/glfw3.h
+ ../../external/glfw/include/GLFW/glfw3native.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.cpp
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.cpp
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3_loader.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_internal.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_tables.cpp
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imstb_textedit.h
+src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_internal.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_widgets.cpp
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imstb_textedit.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj
  ../../external/glfw/include/GLFW/glfw3.h
  ../../include/KHR/khrplatform.h
  ../../include/glad/gl.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.h
+ C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.h
  C:/Users/antis/Desktop/opengl_ex/src/main.cpp

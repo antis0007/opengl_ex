@@ -10,6 +10,41 @@
   "file": "C:/Users/antis/Desktop/opengl_ex/src/gl.c"
 },
 {
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui_impl_opengl3.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui_impl_opengl3.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui_impl_glfw.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui_impl_glfw.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui_draw.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui_tables.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui_tables.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui_widgets.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui_widgets.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\imgui\\imgui_demo.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\imgui\\imgui_demo.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_demo.cpp"
+},
+{
   "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
   "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\context.c",
   "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/context.c"

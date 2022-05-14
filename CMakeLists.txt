@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.18.0)
 #PROJECT:
 project(opengl_ex)
 # Find dependencies
-#find_package(glfw3 REQUIRED)
 #find_package(glad REQUIRED)
 #find_package(imgui REQUIRED)
 

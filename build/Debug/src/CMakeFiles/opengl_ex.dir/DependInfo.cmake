@@ -16,6 +16,13 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../external/glfw/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui.cpp.obj"
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_demo.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui_demo.cpp.obj"
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_draw.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui_draw.cpp.obj"
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_glfw.cpp.obj"
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui_impl_opengl3.cpp.obj"
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_tables.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui_tables.cpp.obj"
+  "C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_widgets.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/imgui/imgui_widgets.cpp.obj"
   "C:/Users/antis/Desktop/opengl_ex/src/main.cpp" "C:/Users/antis/Desktop/opengl_ex/build/Debug/src/CMakeFiles/opengl_ex.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
