@@ -1,0 +1,87 @@
+[
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/opengl_ex.dir/includes_CXX.rsp  -o CMakeFiles\\opengl_ex.dir\\main.cpp.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\main.cpp",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/main.cpp"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe  @CMakeFiles/opengl_ex.dir/includes_C.rsp  -o CMakeFiles\\opengl_ex.dir\\gl.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\src\\gl.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/src/gl.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\context.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/context.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\init.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\init.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/init.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\input.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\input.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/input.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\monitor.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/monitor.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\vulkan.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/vulkan.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\window.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\window.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/window.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\win32_init.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/win32_init.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\win32_joystick.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/win32_joystick.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\win32_monitor.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/win32_monitor.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\win32_time.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/win32_time.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\win32_thread.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/win32_thread.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\win32_window.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/win32_window.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\wgl_context.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/wgl_context.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\egl_context.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/egl_context.c"
+},
+{
+  "directory": "C:/Users/antis/Desktop/opengl_ex/build/Debug/external/glfw/src",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -Wall -std=gnu99 -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\Users\\antis\\Desktop\\opengl_ex\\external\\glfw\\src\\osmesa_context.c",
+  "file": "C:/Users/antis/Desktop/opengl_ex/external/glfw/src/osmesa_context.c"
+}
+]
