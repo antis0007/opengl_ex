@@ -101,10 +101,26 @@ imgui/imgui_impl_glfw.h
 C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.h
 imgui/imgui_impl_opengl3.h
 C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.h
+shader.h
+C:/Users/antis/Desktop/opengl_ex/src/shader.h
 iostream
 -
 glad/gl.h
 -
 GLFW/glfw3.h
+-
+math.h
+-
+
+C:/Users/antis/Desktop/opengl_ex/src/shader.h
+glad/gl.h
+-
+string
+-
+fstream
+-
+sstream
+-
+iostream
 -
 

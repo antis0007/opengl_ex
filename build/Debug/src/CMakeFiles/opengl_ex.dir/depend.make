@@ -56,4 +56,5 @@ src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui_impl_glfw.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui_impl_opengl3.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/main.cpp
+src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/shader.h
 
