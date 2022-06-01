@@ -18,9 +18,13 @@ target_link_libraries(${PROJECT_NAME} PUBLIC glfw)
 #OPENGL:
 find_package( OpenGL REQUIRED )
 target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL::GL)
+#GLM:
+#add_subdirectory(external/glm)
+#target_link_libraries(${PROJECT_NAME} PUBLIC glm)
 #Add Include Dir
 add_subdirectory(include)
 target_include_directories(${PROJECT_NAME} PUBLIC
                           "${PROJECT_BINARY_DIR}"
                           "${PROJECT_SOURCE_DIR}/include"
+                          #"${PROJECT_SOURCE_DIR}/external/glm"
                           )
