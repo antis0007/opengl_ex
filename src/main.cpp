@@ -65,7 +65,7 @@ int main()
   }
 
   //SHADERS:
-  Shader test_shader("shaders/tex.vert", "shaders/tex.frag");
+  Shader test_shader("shaders/tex_transform.vert", "shaders/tex.frag");
 
   //VERTICES:
   //float vertices[] = {
@@ -107,11 +107,22 @@ int main()
   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
   glEnableVertexAttribArray(0);
   // color attribute
-  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-  glEnableVertexAttribArray(1);
+  //glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+  //glEnableVertexAttribArray(1);
   // texture coord attribute
-  glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-  glEnableVertexAttribArray(2);
+  //glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+  //glEnableVertexAttribArray(2);
+
+  //ROTATE texture coord TEST:
+  glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+  glEnableVertexAttribArray(1);
+  //glVertexAttribPointer parameters:
+  //  uint index,
+  //  int size,
+  //  enum type,
+  //  boolean normalized,
+  //  sizei stride,
+  //  const void * pointer
 
   // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
   // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
@@ -200,8 +211,9 @@ int main()
   //bool show_demo_window = true;
   float uni_color[] = {0,0,0,0};
   test_shader.use();
-  glUniform1i(glGetUniformLocation(test_shader.ID, "texture"), 0);
-  glUniform1i(glGetUniformLocation(test_shader.ID, "texture"), 1);
+  //glUniform1i(glGetUniformLocation(test_shader.ID, "texture"), 0);
+  //glUniform1i(glGetUniformLocation(test_shader.ID, "texture"), 1);
+  test_shader.setInt("texture", 1);
 
   // render loop
   // -----------
@@ -244,11 +256,25 @@ int main()
     // Start:
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-
+    // bind textures on corresponding texture units
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    // create transformations
+    glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
+    //transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+    transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+    // render container
     test_shader.use();
 
+    unsigned int transformLoc = glGetUniformLocation(test_shader.ID, "transform");
+    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+
     glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    //For color tri test:
+    //glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
@@ -256,6 +282,11 @@ int main()
     glfwSwapBuffers(window);
     glfwPollEvents();
   }
+  // optional: de-allocate all resources once they've outlived their purpose:
+  // ------------------------------------------------------------------------
+  glDeleteVertexArrays(1, &VAO);
+  glDeleteBuffers(1, &VBO);
+  glDeleteBuffers(1, &EBO);
 
   // glfw: terminate, clearing all previously allocated GLFW resources.
   // ------------------------------------------------------------------
