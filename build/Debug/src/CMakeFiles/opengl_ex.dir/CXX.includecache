@@ -1533,6 +1533,12 @@ sstream
 -
 iostream
 -
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
 
 C:/Users/antis/Desktop/opengl_ex/src/stb_image.h
 stb_image.h
