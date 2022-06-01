@@ -1,2 +1,2 @@
 # opengl_ex
-OpenGL Experiments Repo
+OpenGL Experimental Repo
