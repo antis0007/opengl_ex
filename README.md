@@ -2,5 +2,5 @@
 OpenGL Experimental Repo
 
 ## Showcase:
-![image](https://user-images.githubusercontent.com/31860133/171324010-8eece871-74ea-4f85-8312-19ccdb9f0cf9.png)
+![image](https://user-images.githubusercontent.com/31860133/171514541-93997b2e-320e-4254-b5f2-b0de02bf825f.png)
 
