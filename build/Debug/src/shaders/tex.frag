@@ -9,7 +9,7 @@ uniform vec4 uni_color;
 void main()
 {
     FragColor = texture(ourTexture, TexCoord);
-    //Hackjob RGBA
+    //Hackjob RGBA for tinting
     FragColor[0] += uni_color[0]*uni_color[3];
     FragColor[1] += uni_color[1]*uni_color[3];
     FragColor[2] += uni_color[2]*uni_color[3];
