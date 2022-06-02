@@ -373,6 +373,9 @@ int main()
     //transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
     // render container
     test_shader.use();
+    // pass projection matrix to shader (note that in this case it could change every frame)
+    glm::mat4 projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+    test_shader.setMat4("projection", projection);
     // create transformations
     //glm::mat4 view          = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
     // camera/view transformation
@@ -494,11 +497,12 @@ void mouse_callback(GLFWwindow* window, int button, int action, int mods)
 }
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
-    fov -= (float)yoffset;
+    float factor = 2;
+    fov -= (float)yoffset*factor;
     if (fov < 1.0f)
         fov = 1.0f;
-    if (fov > 45.0f)
-        fov = 45.0f;
+    if (fov > 90.0f)
+        fov = 90.0f;
 }
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------
