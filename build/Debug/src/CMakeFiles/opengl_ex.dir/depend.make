@@ -252,6 +252,7 @@ src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../include/glm/vec2.hpp
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../include/glm/vec3.hpp
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../include/glm/vec4.hpp
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../include/glm/vector_relational.hpp
+src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/camera.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imconfig.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui.h
 src/CMakeFiles/opengl_ex.dir/main.cpp.obj: ../../src/imgui/imgui_impl_glfw.h

@@ -253,6 +253,7 @@ src/CMakeFiles/opengl_ex.dir/main.cpp.obj
  ../../include/glm/vec3.hpp
  ../../include/glm/vec4.hpp
  ../../include/glm/vector_relational.hpp
+ C:/Users/antis/Desktop/opengl_ex/src/camera.h
  C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
  C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
  C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_glfw.h

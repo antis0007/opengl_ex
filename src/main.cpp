@@ -5,6 +5,7 @@
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
 #include "shader.h"
+#include "camera.h"
 
 #include <iostream>
 #include <glad/gl.h>
@@ -24,20 +25,16 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-//Camera Vectors:
-glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
-glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
+// camera
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+double lastX = SCR_WIDTH / 2.0f;
+double lastY = SCR_HEIGHT / 2.0f;
+bool firstMouse = true;
+bool cameraControl = false;
 
 float deltaTime = 0.0f;	// Time between current frame and last frame
 float lastFrame = 0.0f; // Time of last frame
 
-double lastX = 400, lastY = 300;
-float pitch = 0.0f;
-float yaw = -90.0f;
-bool firstMouse = true;
-float fov = 90.0f;
-bool cameraControl = false;
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 float uni_color[] = {0,0,0,0};
 
@@ -170,8 +167,8 @@ int main()
   glEnableVertexAttribArray(0);
 
   //SHADERS:
-  Shader lighting("shaders/lighting.vert", "shaders/lighting.frag");
-  Shader light_source("shaders/lighting_source.vert", "shaders/lighting_source.frag");
+  Shader lighting("shaders/lit/lighting.vert", "shaders/lit/lighting.frag");
+  Shader light_source("shaders/lit/lighting_source.vert", "shaders/lit/lighting_source.frag");
 
   //glVertexAttribPointer parameters:
   //  uint index,
@@ -274,26 +271,19 @@ int main()
   glm::mat4 projection;
   //projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
   //glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-  projection = glm::perspective(glm::radians(fov), 800.0f / 600.0f, 0.1f, 100.0f);
+  //projection = glm::perspective(glm::radians(fov), 800.0f / 600.0f, 0.1f, 100.0f);
   lighting.setMat4("projection", projection);
-
-  // CAMERA DEFINITIONS:
-
-
-  glm::vec3 direction;
-  direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-  direction.y = sin(glm::radians(pitch));
-  direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-  cameraFront = glm::normalize(direction);
-
 
   // render loop
   // -----------
   while (!glfwWindowShouldClose(window))
   {
+    // per-frame time logic
+    // --------------------
     float currentFrame = static_cast<float>(glfwGetTime());
     deltaTime = currentFrame - lastFrame;
     lastFrame = currentFrame;
+
     // input
     // -----
     processInput(window);
@@ -330,26 +320,46 @@ int main()
 
     ImGui::Render();
 
-    // render ---
-    // Start:
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    // render
+    // ------
+
+    //BACKGROUND COLOR:
+    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // be sure to activate shader when setting uniforms/drawing objects
     lighting.use();
     //lighting.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-    lighting.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-    lighting.setVec3("lightPos", lightPos);
-    lighting.setVec3("viewPos", cameraPos);
+    lighting.setVec3("light.position", lightPos);
+    lighting.setVec3("viewPos", camera.Position);
+
+    // light properties
+    glm::vec3 lightColor;
+    lightColor.x = static_cast<float>(sin(glfwGetTime() * 2.0));
+    lightColor.y = static_cast<float>(sin(glfwGetTime() * 0.7));
+    lightColor.z = static_cast<float>(sin(glfwGetTime() * 1.3));
+    glm::vec3 diffuseColor = lightColor   * glm::vec3(1.0f); // decrease the influence
+    glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // low influence
+    lighting.setVec3("light.ambient", ambientColor);
+    lighting.setVec3("light.diffuse", diffuseColor);
+    lighting.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+
+    // material properties
+    lighting.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+    lighting.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+    lighting.setVec3("material.specular", 0.5f, 0.5f, 0.5f); // specular lighting doesn't have full effect on this object's material
+    lighting.setFloat("material.shininess", 32.0f);
+
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
 
     // view/projection transformations
-    glm::mat4 projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-    glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+    glm::mat4 view = camera.GetViewMatrix();
     lighting.setMat4("projection", projection);
     lighting.setMat4("view", view);
+
 
     // world transformation
     glm::mat4 model = glm::mat4(1.0f);
@@ -359,18 +369,28 @@ int main()
     glBindVertexArray(cubeVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
 
+    //LARGER BOX:
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(0.0f,0.0f,0.0f));
+    model = glm::scale(model, glm::vec3(5.0f)); // a bigger cube
+    lighting.setMat4("model", model);
+
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
+    // also draw the lamp object
     light_source.use();
-    //light_source.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-    light_source.setVec3("lightColor",  1.0f, 1.0f, 1.0f);
     light_source.setMat4("projection", projection);
     light_source.setMat4("view", view);
     model = glm::mat4(1.0f);
     model = glm::translate(model, lightPos);
     model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
     light_source.setMat4("model", model);
+    light_source.setVec3("lightColor", lightColor);
 
     glBindVertexArray(lightVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
+
 
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
@@ -395,21 +415,20 @@ int main()
 // ---------------------------------------------------------------------------------------------------------
 void processInput(GLFWwindow *window)
 {
-    float cameraSpeed = 2.5f * deltaTime;
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        cameraPos += cameraSpeed * cameraFront;
+        camera.ProcessKeyboard(FORWARD, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        cameraPos -= cameraSpeed * cameraFront;
+        camera.ProcessKeyboard(BACKWARD, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+        camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-    //if (glfwGetKey(window, GLFW_MOUSE_BUTTON_1) == GLFW_PRESS)
-      //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-    //if (glfwGetKey(window, GLFW_MOUSE_BUTTON_1) == GLFW_RELEASE)
-      //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+        camera.ProcessKeyboard(RIGHT, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+        camera.Sprint = true;
+    if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+        camera.Sprint = false;
 }
 void pos_callback(GLFWwindow* window, double xpos, double ypos)
 {
@@ -419,33 +438,15 @@ void pos_callback(GLFWwindow* window, double xpos, double ypos)
         lastY = ypos;
         firstMouse = false;
     }
-    float xoffset;
-    float yoffset;
-    float sensitivity = 0.1f;
 
     if(cameraControl==true){
-      xoffset = xpos - lastX;
-      yoffset = lastY - ypos;
+      float xoffset = xpos - lastX;
+      float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
+
       lastX = xpos;
       lastY = ypos;
 
-
-      xoffset *= sensitivity;
-      yoffset *= sensitivity;
-
-      yaw   += xoffset;
-      pitch += yoffset;
-
-      if(pitch > 89.0f)
-          pitch = 89.0f;
-      if(pitch < -89.0f)
-          pitch = -89.0f;
-
-      glm::vec3 direction;
-      direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-      direction.y = sin(glm::radians(pitch));
-      direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-      cameraFront = glm::normalize(direction);
+      camera.ProcessMouseMovement(xoffset, yoffset);
     }
 }
 void mouse_callback(GLFWwindow* window, int button, int action, int mods)
@@ -465,12 +466,7 @@ void mouse_callback(GLFWwindow* window, int button, int action, int mods)
 }
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
-    float factor = 2;
-    fov -= (float)yoffset*factor;
-    if (fov < 1.0f)
-        fov = 1.0f;
-    if (fov > 90.0f)
-        fov = 90.0f;
+    camera.ProcessMouseScroll(static_cast<float>(yoffset));
 }
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------

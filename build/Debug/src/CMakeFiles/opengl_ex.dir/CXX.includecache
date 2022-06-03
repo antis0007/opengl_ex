@@ -1468,6 +1468,16 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 ../../include/glm/detail/func_vector_relational.inl
 
+C:/Users/antis/Desktop/opengl_ex/src/camera.h
+glad/gl.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+vector
+-
+
 C:/Users/antis/Desktop/opengl_ex/src/imgui/imconfig.h
 
 C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui.h
@@ -1507,6 +1517,8 @@ imgui/imgui_impl_opengl3.h
 C:/Users/antis/Desktop/opengl_ex/src/imgui/imgui_impl_opengl3.h
 shader.h
 C:/Users/antis/Desktop/opengl_ex/src/shader.h
+camera.h
+C:/Users/antis/Desktop/opengl_ex/src/camera.h
 iostream
 -
 glad/gl.h
