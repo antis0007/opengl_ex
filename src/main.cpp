@@ -16,14 +16,17 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+//Function Prototypes:
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 void mouse_callback(GLFWwindow* window, int button, int action, int mods);
 void pos_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+unsigned int loadTexture(const char *path);
+
 // settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+unsigned int SCR_WIDTH = 800;
+unsigned int SCR_HEIGHT = 600;
 
 // camera
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -90,6 +93,9 @@ int main()
   // configure global opengl state
   // -----------------------------
   glEnable(GL_DEPTH_TEST);
+  //TRANSPARENCY:
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
   //VERTICES:
   float vertices[] = {
@@ -170,77 +176,11 @@ int main()
   Shader lighting("shaders/lit/lighting.vert", "shaders/lit/lighting.frag");
   Shader light_source("shaders/lit/lighting_source.vert", "shaders/lit/lighting_source.frag");
 
-  //glVertexAttribPointer parameters:
-  //  uint index,
-  //  int size,
-  //  enum type,
-  //  boolean normalized,
-  //  sizei stride,
-  //  const void * pointer
-
-  // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
-  // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-  // glBindVertexArray(0);
-
-  //EXAMPLE:
-  //Drawing an Object:
-
-  // 0. copy our vertices array in a buffer for OpenGL to use
-  //glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  //glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-  // 1. then set the vertex attributes pointers
-  //glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-  //glEnableVertexAttribArray(0);
-  // 2. use our shader program when we want to render an object
-  //glUseProgram(shaderProgram);
-  // 3. now draw the object
-  //someOpenGLFunctionThatDrawsOurTriangle();
-
-  //Using VAO:
-
-  // ..:: Initialization code (done once (unless your object frequently changes)) :: ..
-  // 1. bind Vertex Array Object
-  //glBindVertexArray(VAO);
-  // 2. copy our vertices array in a buffer for OpenGL to use
-  //glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  //glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-  // 3. then set our vertex attributes pointers
-  //glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-  //glEnableVertexAttribArray(0);
-  //[...]//
-  // ..:: Drawing code (in render loop) :: ..
-  // 4. draw the object
-  //glUseProgram(shaderProgram);
-  //glBindVertexArray(VAO);
-  //someOpenGLFunctionThatDrawsOurTriangle();
-
-  // load and create a texture
-  // -------------------------
-  unsigned int texture;
-  // texture
-  // ---------
-  glGenTextures(1, &texture);
-  glBindTexture(GL_TEXTURE_2D, texture);
-   // set the texture wrapping parameters
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// set texture wrapping to GL_REPEAT (default wrapping method)
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-  // set texture filtering parameters
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-  // load image, create texture and generate mipmaps
-  int width, height, nrChannels;
-  stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
-  unsigned char *data = stbi_load("container.jpg", &width, &height, &nrChannels, 0);
-  if (data)
-  {
-      glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-      glGenerateMipmap(GL_TEXTURE_2D);
-  }
-  else
-  {
-      std::cout << "Failed to load texture" << std::endl;
-  }
-  stbi_image_free(data);
+  // load textures (we now use a utility function to keep the code more organized)
+  // -----------------------------------------------------------------------------
+  unsigned int diffuseMap  = loadTexture("container2.png");
+  unsigned int specularMap = loadTexture("container2_specular.png");
+  unsigned int emissionMap = loadTexture("matrix.jpg");
 
   //imgui
   const char* glsl_version = "#version 330 core";
@@ -264,6 +204,9 @@ int main()
   //glUniform1i(glGetUniformLocation(lighting.ID, "texture"), 0);
   //glUniform1i(glGetUniformLocation(lighting.ID, "texture"), 1);
   //lighting.setInt("texture", 0);
+  lighting.setInt("material.diffuse", 0);
+  lighting.setInt("material.specular", 1);
+  lighting.setInt("material.emission", 2);
 
   //glm::mat4 view = glm::mat4(1.0f);
   // note that we're translating the scene in the reverse direction of where we want to move
@@ -329,30 +272,18 @@ int main()
 
     // be sure to activate shader when setting uniforms/drawing objects
     lighting.use();
-    //lighting.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
     lighting.setVec3("light.position", lightPos);
     lighting.setVec3("viewPos", camera.Position);
 
     // light properties
-    glm::vec3 lightColor;
-    lightColor.x = static_cast<float>(sin(glfwGetTime() * 2.0));
-    lightColor.y = static_cast<float>(sin(glfwGetTime() * 0.7));
-    lightColor.z = static_cast<float>(sin(glfwGetTime() * 1.3));
-    glm::vec3 diffuseColor = lightColor   * glm::vec3(1.0f); // decrease the influence
-    glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // low influence
-    lighting.setVec3("light.ambient", ambientColor);
-    lighting.setVec3("light.diffuse", diffuseColor);
+    lighting.setVec3("light.ambient", 0.1f, 0.1f, 0.1f);
+    lighting.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
     lighting.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+    lighting.setVec4("light.color", uni_color[0],uni_color[1],uni_color[2],1.0f);
+    lighting.setFloat("light.intensity", uni_color[3]*3.0f);
 
     // material properties
-    lighting.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
-    lighting.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
-    lighting.setVec3("material.specular", 0.5f, 0.5f, 0.5f); // specular lighting doesn't have full effect on this object's material
-    lighting.setFloat("material.shininess", 32.0f);
-
-
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture);
+    lighting.setFloat("material.shininess", 64.0f);
 
     // view/projection transformations
     glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -360,21 +291,22 @@ int main()
     lighting.setMat4("projection", projection);
     lighting.setMat4("view", view);
 
-
     // world transformation
     glm::mat4 model = glm::mat4(1.0f);
     lighting.setMat4("model", model);
 
+    // bind diffuse map
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, diffuseMap);
+    // bind specular map
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, specularMap);
+    // bind emission map
+    //glActiveTexture(GL_TEXTURE2);
+    //glBindTexture(GL_TEXTURE_2D, emissionMap);
+
     // render the cube
     glBindVertexArray(cubeVAO);
-    glDrawArrays(GL_TRIANGLES, 0, 36);
-
-    //LARGER BOX:
-    model = glm::mat4(1.0f);
-    model = glm::translate(model, glm::vec3(0.0f,0.0f,0.0f));
-    model = glm::scale(model, glm::vec3(5.0f)); // a bigger cube
-    lighting.setMat4("model", model);
-
     glDrawArrays(GL_TRIANGLES, 0, 36);
 
 
@@ -382,11 +314,11 @@ int main()
     light_source.use();
     light_source.setMat4("projection", projection);
     light_source.setMat4("view", view);
+    light_source.setVec4("lightColor", uni_color[0],uni_color[1],uni_color[2],uni_color[3]);
     model = glm::mat4(1.0f);
     model = glm::translate(model, lightPos);
     model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
     light_source.setMat4("model", model);
-    light_source.setVec3("lightColor", lightColor);
 
     glBindVertexArray(lightVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -461,6 +393,7 @@ void mouse_callback(GLFWwindow* window, int button, int action, int mods)
     else if(GLFW_RELEASE == action){
       cameraControl = false;
       glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+      //glfwGetCursorPos(window, &lastX, &lastY);
     }
   }
 }
@@ -475,4 +408,44 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+    SCR_WIDTH=width;
+    SCR_HEIGHT=height;
+}
+// utility function for loading a 2D texture from file
+// ---------------------------------------------------
+unsigned int loadTexture(char const * path)
+{
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+
+    int width, height, nrComponents;
+    unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
+    if (data)
+    {
+        GLenum format;
+        if (nrComponents == 1)
+            format = GL_RED;
+        else if (nrComponents == 3)
+            format = GL_RGB;
+        else if (nrComponents == 4)
+            format = GL_RGBA;
+
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        stbi_image_free(data);
+    }
+    else
+    {
+        std::cout << "Texture failed to load at path: " << path << std::endl;
+        stbi_image_free(data);
+    }
+
+    return textureID;
 }
